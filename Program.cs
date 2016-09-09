@@ -49,6 +49,7 @@ namespace FacilityCodeRejects
                 Connectiondb = SASDatabase + i;
                 Connectionuser = authuser + i;
 
+                SqlConnection sas = new SqlConnection("Data Source=" + Connectiondb + "; Initial Catalog=ACVSCore; User id=" + Connectionuser + "; Password=REDACTED;");
                 Query.Connection = sas;
                 sas.Open();
                 reader = Query.ExecuteReader();
